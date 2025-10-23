@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Mais Autonomia - Aposentadoria Digna para Idosos com Deficiência</title>
+    <meta name="description" content="Lutamos por aposentadoria digna para idosos com deficiência. Apoie nossa causa por políticas públicas inclusivas.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#3b82f6",
+                        lightblue: "#dbeafe"
+                    },
+                    fontFamily: {
+                        'sans': ['Open Sans', 'sans-serif']
+                    },
+                    fontSize: {
+                        'base': '18px',
+                        'lg': '20px',
+                        'xl': '24px',
+                        '2xl': '28px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-white font-sans text-base text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center py-4">
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-heart text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-primary">Vida Mais Autonomia</h1>
+                        <p class="text-sm text-gray-600">Aposentadoria Digna para Idosos com Deficiência</p>
+                    </div>
+                </div>
+                
+                <nav class="w-full md:w-auto">
+                    <ul class="flex flex-wrap justify-center space-x-2 md:space-x-4">
+                        <li><button onclick="showSection('home')" class="nav-link px-4 py-2 rounded-lg text-primary font-semibold bg-lightblue">Início</button></li>
+                        <li><button onclick="showSection('sobre')" class="nav-link px-4 py-2 rounded-lg text-gray-700 font-semibold">Sobre</button></li>
+                        <li><button onclick="showSection('causas')" class="nav-link px-4 py-2 rounded-lg text-gray-700 font-semibold">Causas</button></li>
+                        <li><button onclick="showSection('acoes')" class="nav-link px-4 py-2 rounded-lg text-gray-700 font-semibold">Ações</button></li>
+                        <li><button onclick="showSection('apoio')" class="nav-link px-4 py-2 rounded-lg text-gray-700 font-semibold">Apoie</button></li>
+                        <li><button onclick="showSection('contato')" class="nav-link px-4 py-2 rounded-lg text-gray-700 font-semibold">Contato</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+        <!-- Home Section -->
+        <section id="home" class="section-active">
+            <div class="bg-gradient-to-r from-primary to-secondary text-white py-16">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Aposentadoria Digna para Idosos com Deficiência</h2>
+                    <p class="text-xl mb-8 max-w-3xl mx-auto">Uma luta que precisa do seu apoio para garantir vida digna aos nossos idosos mais vulneráveis</p>
+                    <button onclick="showSection('apoio')" class="bg-white text-primary px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition duration-300">
+                        Quero Apoiar Esta Causa
+                    </button>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 py-16">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-lightblue p-6 rounded-lg text-center">
+                        <i class="fas fa-wheelchair text-primary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-3">Realidade Invisível</h3>
+                        <p>Mostramos a dura realidade de quem vive com aposentadoria insuficiente e deficiência</p>
+                    </div>
+                    <div class="bg-lightblue p-6 rounded-lg text-center">
+                        <i class="fas fa-balance-scale text-primary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-3">Revisão Urgente</h3>
+                        <p>Debatemos a necessidade de revisão dos benefícios e políticas públicas</p>
+                    </div>
+                    <div class="bg-lightblue p-6 rounded-lg text-center">
+                        <i class="fas fa-hands-helping text-primary text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold text-primary mb-3">Mobilização Social</h3>
+                        <p>Unimos sociedade e autoridades por ações concretas e inclusivas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section id="sobre" class="section-hidden">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl font-bold text-primary text-center mb-12">Sobre Nossa Luta</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://picsum.photos/600/400?random=1" alt="Idoso com deficiência em situação vulnerável" class="w-full rounded-lg shadow-lg" loading="lazy">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-primary mb-6">A Realidade que Precisamos Enfrentar</h3>
+                        <p class="mb-4 text-lg">Milhares de idosos com deficiência enfrentam diariamente a dura realidade de uma aposentadoria insuficiente para garantir uma vida digna.</p>
+                        <p class="mb-4 text-lg">O valor recebido muitas vezes não cobre nem o básico para cuidados médicos, medicamentos, alimentação adequada e moradia digna.</p>
+                        <p class="mb-6 text-lg">Esta situação expõe uma falha grave no nosso sistema de seguridade social e na forma como a sociedade protege seus cidadãos mais vulneráveis.</p>
+                        
+                        <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+                            <p class="text-red-700 font-semibold">"A aposentadoria não paga nem os remédios que preciso tomar todos os dias" - Maria, 72 anos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Causas Section -->
+        <section id="causas" class="section-hidden">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl font-bold text-primary text-center mb-12">Nossas Principais Causas</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-file-invoice-dollar text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary">Reajustes Reais das Aposentadorias</h3>
+                        </div>
+                        <p class="text-gray-700">Lutamos por reajustes que acompanhem verdadeiramente o custo de vida, especialmente considerando as despesas extras com saúde e acessibilidade.</p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-universal-access text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary">Benefício de Prestação Continuada (BPC)</h3>
+                        </div>
+                        <p class="text-gray-700">Defendemos a melhoria e ampliação do BPC, garantindo que idosos com deficiência em situação de vulnerabilidade recebam apoio adequado.</p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-home text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary">Moradia Acessível</h3>
+                        </div>
+                        <p class="text-gray-700">Promovemos programas de habitação acessível e adaptada para idosos com deficiência, garantindo dignidade no local onde vivem.</p>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user-md text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary">Atenção Integral à Saúde</h3>
+                        </div>
+                        <p class="text-gray-700">Buscamos garantir acesso a tratamentos, medicamentos e reabilitação sem custos proibitivos para idosos com deficiência.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ações Section -->
+        <section id="acoes" class="section-hidden">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl font-bold text-primary text-center mb-12">Nossas Ações Concretas</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                    <div>
+                        <h3 class="text-2xl font-bold text-primary mb-6">O que Fazemos</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                                    <i class="fas fa-bullhorn text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Advocacy e Pressão Política</h4>
+                                    <p>Atuamos junto aos legisladores e gestores públicos para promover mudanças nas políticas de aposentadoria.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                                    <i class="fas fa-users text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Mobilização Social</h4>
+                                    <p>Organizamos campanhas, abaixo-assinados e eventos para conscientizar a sociedade sobre esta causa.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center mt-1 mr-4 flex-shrink-0">
+                                    <i class="fas fa-gavel text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg mb-2">Assessoria Jurídica</h4>
+                                    <p>Oferecemos orientação sobre direitos e benefícios disponíveis para idosos com deficiência.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <img src="https://picsum.photos/600/400?random=2" alt="Ações de mobilização e advocacy" class="w-full rounded-lg shadow-lg" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="bg-lightblue rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-primary text-center mb-6">Próximos Passos</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-xl">1</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Campanha Nacional</h4>
+                            <p class="text-sm">Mobilização em todas as regiões do país</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-xl">2</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Projeto de Lei</h4>
+                            <p class="text-sm">Elaboração de proposta legislativa</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white font-bold text-xl">3</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Audiências Públicas</h4>
+                            <p class="text-sm">Espaços de debate com autoridades</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apoio Section -->
+        <section id="apoio" class="section-hidden">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl font-bold text-primary text-center mb-12">Como Você Pode Apoiar</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm mb-8">
+                            <h3 class="text-2xl font-bold text-primary mb-6">Assine Nossa Petição</h3>
+                            <p class="mb-6">Junte-se a milhares de pessoas que já assinaram nossa petição por aposentadoria digna para idosos com deficiência.</p>
+                            <form id="petitionForm" class="space-y-4">
+                                <div>
+                                    <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
+                                    <input type="text" id="nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="cidade" class="block text-sm font-medium text-gray-700 mb-1">Cidade/Estado</label>
+                                    <input type="text" id="cidade" name="cidade" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                </div>
+                                <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-blue-800 transition duration-300">
+                                    Assinar Petição
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="bg-lightblue rounded-lg p-8 mb-8">
+                            <h3 class="text-2xl font-bold text-primary mb-6">Outras Formas de Apoio</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-share-alt text-primary text-xl mr-4"></i>
+                                    <div>
+                                        <h4 class="font-bold">Divulgue Nossa Causa</h4>
+                                        <p class="text-sm">Compartilhe nas redes sociais e com amigos</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-hand-holding-usd text-primary text-xl mr-4"></i>
+                                    <div>
+                                        <h4 class="font-bold">Doações</h4>
+                                        <p class="text-sm">Ajude a financiar nossas ações</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-hands-helping text-primary text-xl mr-4"></i>
+                                    <div>
+                                        <h4 class="font-bold">Voluntariado</h4>
+                                        <p class="text-sm">Participe de nossas atividades</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-primary text-white rounded-lg p-8 text-center">
+                            <h3 class="text-2xl font-bold mb-4">Já Somos</h3>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div>
+                                    <div class="text-3xl font-bold">15.327</div>
+                                    <div class="text-sm">Assinaturas</div>
+                                </div>
+                                <div>
+                                    <div class="text-3xl font-bold">42</div>
+                                    <div class="text-sm">Cidades</div>
+                                </div>
+                                <div>
+                                    <div class="text-3xl font-bold">8</div>
+                                    <div class="text-sm">Estados</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="section-hidden">
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl font-bold text-primary text-center mb-12">Entre em Contato</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+                            <h3 class="text-2xl font-bold text-primary mb-6">Envie Sua Mensagem</h3>
+                            <form id="contactForm" class="space-y-4">
+                                <div>
+                                    <label for="contactName" class="block text-sm font-medium text-gray-700 mb-1">Nome</label>
+                                    <input type="text" id="contactName" name="contactName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="contactEmail" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                    <input type="email" id="contactEmail" name="contactEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="contactSubject" class="block text-sm font-medium text-gray-700 mb-1">Assunto</label>
+                                    <input type="text" id="contactSubject" name="contactSubject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="contactMessage" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                                    <textarea id="contactMessage" name="contactMessage" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-blue-800 transition duration-300">
+                                    Enviar Mensagem
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="bg-lightblue rounded-lg p-8 mb-8">
+                            <h3 class="text-2xl font-bold text-primary mb-6">Informações de Contato</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-primary text-xl mr-4"></i>
+                                    <div>
+                                        <h4 class="font-bold">E-mail</h4>
+                                        <p>contato@vidamaisautonomia.org.br</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-phone text-primary text-xl mr-4"></i>
+                                    <div>
+                                        <h4 class="font-bold">Telefone</h4>
+                                        <p>(11) 3456-7890</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-primary text-xl mr-4"></i>
+                                    <div>
+                                        <h4 class="font-bold">Endereço</h4>
+                                        <p>Rua das Flores, 123 - Centro<br>São Paulo/SP</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white border border-gray-200 rounded-lg p-8">
+                            <h3 class="text-2xl font-bold text-primary mb-6">Redes Sociais</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition duration-300">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Vida Mais Autonomia</h3>
+                    <p class="text-blue-100">Lutando por aposentadoria digna para idosos com deficiência.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="showSection('home')" class="text-blue-100 hover:text-white transition">Início</button></li>
+                        <li><button onclick="showSection('sobre')" class="text-blue-100 hover:text-white transition">Sobre</button></li>
+                        <li><button onclick="showSection('causas')" class="text-blue-100 hover:text-white transition">Causas</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Nossas Ações</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="showSection('acoes')" class="text-blue-100 hover:text-white transition">Ações</button></li>
+                        <li><button onclick="showSection('apoio')" class="text-blue-100 hover:text-white transition">Apoie</button></li>
+                        <li><button onclick="showSection('contato')" class="text-blue-100 hover:text-white transition">Contato</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Newsletter</h4>
+                    <div class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-3 py-2 text-gray-800 rounded-l-lg w-full">
+                        <button class="bg-secondary px-4 py-2 rounded-r-lg font-bold hover:bg-blue-500 transition">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-500 mt-8 pt-8 text-center text-blue-200">
+                <p>&copy; 2024 Vida Mais Autonomia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
